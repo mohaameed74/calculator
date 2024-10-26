@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+</head>
+<body>
+ <div class="container">
+    <div class="top ">
+        <h3>calc</h3>
+        <div class="toggle">
+            <p class="text">theme</p>
+            <div class="theme">
+                <div class="number">
+                    <p id="one">1</p>
+                    <p id="two">2</p>
+                    <p id="three">3</p>
+                </div>
+                <div class="circle" id="circle">
+                   <div class="before">
+                    
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="display">
+    <input type="text" id="displaay" readonly disabled>
+</div>
+
+<div class="btn">
+    <button class="num" onclick="display.value +=7" >7</button>
+    <button  class="num" onclick="display.value +=8" >8</button>
+    <button class="num"  onclick="display.value +=9">9</button>
+    <button class="del" onclick="del()">DEL</button>
+    <button  class="num" onclick="display.value +=4">4</button>
+    <button  class="num" onclick="display.value +=5">5</button>
+    <button class="num"  onclick="display.value +=6">6</button>
+    <button  class="num" onclick="display.value +='+'">+</button>
+    <button class="num"  onclick="display.value +=1">1</button>
+    <button  class="num" onclick="display.value +=2">2</button>
+    <button  class="num" onclick="display.value +=3">3</button>
+    <button onclick="display.value +='-'">-</button>
+    <button onclick="display.value +='.'">.</button>
+    <button onclick="display.value +=0">0</button>
+    <button onclick="display.value +='/'">/</button>
+    <button onclick="display.value +='*'">x</button>
+    <button class="reset" onclick="reset()">RESET</button>
+    <button class="equal" onclick="equal()">=</button>
+</div>
+
+ </div>   
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>

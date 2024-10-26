@@ -1,0 +1,375 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+:root {
+   
+ /* Theme 1 */
+/* 
+#### Backgrounds */
+
+--main-background: hsl(222, 26%, 31%);
+--toggle-backgroundAndkeyBackground: hsl(223, 31%, 20%);
+--screen-background: hsl(224, 36%, 15%);
+
+/* #### Keys */
+
+--key-background: hsl(225, 21%, 49%);
+--key-shadow: hsl(224, 28%, 35%);
+
+--Red: hsl(6, 63%, 50%);
+--key-shadooow: hsl(6, 70%, 34%);
+
+--key-background: hsl(30, 25%, 89%);
+--Grayish-orange: hsl(28, 16%, 65%);
+
+/* #### Text */
+
+ --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+--White: hsl(0, 0%, 100%) ;
+
+/* ### Theme 2 */
+
+/* #### Backgrounds */
+
+--Light-gray: hsl(0, 0%, 90%);
+--Grayish-red: hsl(0, 5%, 81%);
+--Very-light-gray: hsl(0, 0%, 93%);
+
+/* #### Keys */
+
+--Dark-moderate-cyan: hsl(185, 42%, 37%);
+--Very-dark-cyan: hsl(185, 58%, 25%);
+
+--Orange: hsl(25, 98%, 40%);
+--Dark-orange: hsl(25, 99%, 27%);
+
+--Light-grayish-yellow: hsl(45, 7%, 89%);
+--Dark-grayish-orange-: hsl(35, 11%, 61%);
+
+/* #### Text */
+
+--Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+--White: hsl(0, 0%, 100%);
+
+/* ### Theme 3 */
+
+/* #### Backgrounds */
+
+--Very-dark-violeta: hsl(268, 75%, 9%);
+--Very-dark-violet: hsl(268, 71%, 12%);
+
+/* #### Keys */
+
+--Dark-violet: hsl(281, 89%, 26%);
+--Vivid-magenta : hsl(285, 91%, 52%);
+
+--Pure-cyan: hsl(176, 100%, 44%);
+--Soft-cyan: hsl(177, 92%, 70%);
+
+--Very-dark-violet : hsl(268, 47%, 21%);
+--Dark-magenta : hsl(290, 70%, 36%);
+
+/* #### Text */
+
+--Light-yellow: hsl(52, 100%, 62%);
+--Very-dark-blue: hsl(198, 20%, 13%);
+
+
+}
+
+
+body {
+  font-family: "League Spartan", serif;
+  background-color: var(--main-background);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease 0.4s;
+}
+body.active1 { 
+  background-color: var(--Light-gray);
+}
+body.active1 .top h3 {
+  color: var(--Very-dark-grayish-yellow);
+}
+body.active1 .text { 
+  color: var(--Very-dark-grayish-yellow);
+}
+body.active1 .number p{
+  color: var(--Very-dark-grayish-yellow);
+}
+body.active1 .circle {
+  background-color: var(--Grayish-red);
+}
+body.active1 .before { 
+  background-color: var(--Orange);
+} 
+body.active2 { 
+  background-color: var(--Very-dark-violeta);
+}
+
+
+
+.container { 
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  width: 40%;
+}
+
+.top {
+  background-color: inherit;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.top h3 {
+  color: var(--White);
+  font-size: 2rem;
+  display: flex;
+  align-items: flex-end;
+}
+body.active2 .top h3 {
+  color: var(--Light-yellow);
+}
+.toggle { 
+  display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+}
+.text { 
+  color: var(--White);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+body.active2 .text {
+  color: var(--Light-yellow);
+}
+.theme { 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.number { 
+  display: flex;
+  letter-spacing: 10px;
+  align-items: center;
+  width: 70px;
+  justify-content: space-between;
+  margin-left: 5px;
+}
+
+.number p { 
+  color: var(--White);
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+body.active2 .number p { 
+  color: var(--Light-yellow);
+}
+.circle {
+  background-color: var(--toggle-backgroundAndkeyBackground);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
+  border-radius: 10px;
+  width: 70px;
+  cursor: pointer;
+  position: relative;
+  height: 25px;
+}
+body.active2 .circle {
+  background-color: #1e0836;
+
+}
+.before { 
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  border-radius: 50%;
+  background: var(--Red);
+  left: 4%;
+  top: 3px;
+}
+body.active2 .before { 
+  background: var(--Pure-cyan);
+}
+.display {
+  width: 100%;
+}
+.display input {
+  width: 100%;
+  background-color: var(--screen-background);
+  height: 6rem;
+  border: none;
+  border-radius: 5px;
+  color: var(--White);
+  text-align: right;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 20px;
+}
+body.active1 .display input { 
+  background-color: var(--White);
+  color: var(--Very-dark-grayish-yellow);
+}
+body.active2 .display input { 
+  background-color: #1e0836;
+  color: var(--Light-yellow);
+}
+.btn { 
+  display: flex;
+  gap: 2%;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: var(--toggle-backgroundAndkeyBackground);
+  padding: 15px;
+  height: 25rem;
+  border-radius: 5px;
+}
+body.active1 .btn { 
+  background-color:var(--Grayish-red);
+}
+body.active2 .btn { 
+  background-color:#1e0836;
+}
+
+
+.btn button {
+  flex-basis: calc(94% / 4);
+  margin-top: 15px;
+  background-color: var(--key-background);
+  font-weight: bold;
+  font-size: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  color: var(--Very-dark-grayish-blue);
+  box-shadow: 0px 3px 0px 0px var(--Grayish-orange);
+  transition: ease 0.4s;
+}
+.btn button:hover { 
+  background-color:#ffffff;
+}
+body.active1 .btn button:hover {
+  background-color: #ffffff;
+}
+body.active2 .btn button:hover {
+  background-color: #6b34ac;
+}
+.btn button:active {
+  transform: translateY(4px);
+}
+body.active2 .btn button {
+  background-color: #331a4e;
+  color: var(--Light-yellow);
+}
+.reset ,
+.equal {
+  flex: 0.6;
+}
+.del,
+.reset { 
+  background-color: var(--main-background) !important ;
+  color: var(--White) !important;
+  box-shadow: 0px 3px 0px 0px var(--key-shadow) !important ;
+}
+.reset:hover {
+  background-color: #a2b2e2 !important;
+}
+.del:hover {
+  background-color: #a2b2e2 !important;
+}
+body.active2 .reset {
+  background-color: #56067c !important;
+  color: white !important;
+}
+body.active2 .del {
+  background-color: #56067c !important;
+  color: white !important;
+}
+body.active1 .reset {
+  background-color: var(--Dark-moderate-cyan) !important;
+}
+body.active1 .del {
+  background-color: var(--Dark-moderate-cyan) !important;
+}
+.equal{
+  color: var(--White) !important;
+  background-color: var(--Red) !important;
+  box-shadow: 0px 3px 0px 0px var(--key-shadooow) !important;
+}
+.equal:hover { 
+  background-color: #f96c5b !important;
+}
+body.active1 .equal {
+   background-color: var(--Orange) !important;
+}
+body.active2 .equal {
+   background-color: #00decf !important;
+   color: black !important;
+}
+body.active1 .equal:hover {
+  background-color: #ff8b38 !important;
+}
+body.active1 .del:hover {
+  background-color: #62b5bd !important;
+}
+body.active1 .reset:hover {
+  background-color: #62b5bd!important;
+}
+body.active2 .btn button { 
+  box-shadow: 0px 3px 0px 0px #802097;
+}
+body.active2 .reset {
+  box-shadow: 0px 3px 0px 0px #b61aea !important;
+}
+body.active2 .del {
+  box-shadow: 0px 3px 0px 0px #b61aea !important;
+}
+body.active2 .equal { 
+  box-shadow: 0px 3px 0px 0px #6ef7ee !important;
+}
+body.active2 .reset:hover {
+  background-color: #8332b1 !important;
+}
+body.active2 .del:hover {
+  background-color: #8332b1 !important;
+}
+body.active2 .equal:hover {
+  background-color: #94fff9 !important;
+}
+
+@media (max-width: 768px) { 
+   body {
+    display: flex;
+   }
+   .container { 
+    display: flex;
+    width: 90%;
+   }
+   .top { 
+    width: 100%;
+   }
+   .top h3 { 
+    font-size: 2rem;
+   }
+   .display input { 
+    border-radius: 10px;
+   }
+   .btn { 
+    height: 25rem;
+   }
+   .btn button  { 
+    font-size: 2rem;
+   }
+}
